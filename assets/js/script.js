@@ -1,3 +1,4 @@
+// Formulating the test question and have the answer to prompt user if there anwers is wrong or correct
 var questions = [{
     question: "1. Commonly used data types DO NOT include :?",
     choices: ["1. strings", "2. boolean", "3. alert", "4. number"],
@@ -24,7 +25,7 @@ var questions = [{
 var score = 0;
 var questionIndex = 0;
 
-// Start working code 
+// Start to test response and tabulated codes
 // Declared variables
 var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
