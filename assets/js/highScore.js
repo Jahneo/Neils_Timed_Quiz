@@ -16,7 +16,7 @@ clear.addEventListener("click",function(){
 
 var getScore = localStorage.getItem("getScore");
 
-if(getScore !== nul) {
+if(getScore !== null) {
     for (var i = 0; i < getScore.length; i++) {
 
         var highScoreList = document.highScoreElement("list");
@@ -26,6 +26,6 @@ if(getScore !== nul) {
 }
 
 
-retake.addEventListener("click", function() {
+clear.addEventListener("click", function() {
     window.location.replace("./index.html");
 });

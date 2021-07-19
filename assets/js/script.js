@@ -161,7 +161,7 @@ function allDone() {
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
     createSubmit.textContent = "Submit";
-
+    
     questionsDiv.appendChild(createSubmit);
 
     // Event listener to capture initials and local storage for initials and score
