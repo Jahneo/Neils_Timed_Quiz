@@ -1,3 +1,5 @@
+       /* style to contained text a*/
+
        
         #wrapper {
             position: absolute;
@@ -6,7 +8,10 @@
             width: 500px;
             height: 500px;
             border: 1px solid purple;
+
         }
+
+        /* styling for the start time counter */
         #startTime {
             background-color: purple;
             margin-left: 33%;
@@ -14,6 +19,7 @@
             font-size: 20px;
             color: white;
         }
+        /* style for the quiz */
         #questionsDiv {
             margin: 20px;
         }
@@ -21,7 +27,7 @@
         #currentTime {
             float: right;
         }
-
+        /* css style for the button te retake the test */
         #reTake {
             background-color: purple;
             position: relative;
@@ -35,7 +41,7 @@
             text-decoration: none;
         }
 
-
+        /* applying styles to the clear high score buttons*/
 
         #clear {
             background-color: purple;
@@ -44,7 +50,7 @@
             font-size: 20px;
             color: white;
             top: 30%;
-            right: 5%;
+            right: 25%;
             text-align: center;
         }
 
@@ -73,7 +79,7 @@
             width: 50%;
             border: 1px solid lightgray;
         }
-
+        
         h1 {
             text-align: center;
         }

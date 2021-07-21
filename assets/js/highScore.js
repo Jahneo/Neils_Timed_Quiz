@@ -2,30 +2,33 @@
 //declare variables to store high score
 
 var highScore = document.querySelector("#highScore");
+
 // variables to reset or clear high score
+var clear = document.querySelector("#clear");
 
-var clear = document.querySelector("clear");
-//variable to reset quiz or go back 
+//variable to restart quiz or Retake 
+var reTake = document.querySelector("#reTake");
 
-var reTake = document.querySelector("#retake");
-
+// on the click of the button the scores are reset/cleared from local storage
 clear.addEventListener("click",function(){
     localStorage.clear();
     location.reload();
 });
 
+// call on the function to get all scores and intials to for Tabulate_High_Score page
 var getScore = localStorage.getItem("getScore");
+getScore=JSON.parse(getScore)
 
 if(getScore !== null) {
     for (var i = 0; i < getScore.length; i++) {
 
-        var highScoreList = document.highScoreElement("list");
-        highScoreList.textContent = getScore[i].initials + " " + getScore[i].score;
+        var highScoreList = document.createElement("list");
+        highScoreList.textContent =  getScore[i].initials + " " + getScore[i].score;
         highScore.appendChild(highScoreList);
     }
 }
 
-
-clear.addEventListener("click", function() {
+// function to append values to the list score list
+reTake.addEventListener("click", function() {
     window.location.replace("./index.html");
 });

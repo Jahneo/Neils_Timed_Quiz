@@ -32,7 +32,7 @@ var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
 
-// Seconds left is 15 seconds per question:
+// Seconds left is 10 seconds per question:
 var secondsLeft = 76;
 // Holds interval time
 var holdInterval = 0;
@@ -152,24 +152,22 @@ function allDone() {
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
-    createInput.textContent = "";
+    createInput.textContent = " ";
 
     questionsDiv.appendChild(createInput);
 
     // submit
     var createSubmit = document.createElement("button");
-    createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
     createSubmit.textContent = "Submit";
     
     questionsDiv.appendChild(createSubmit);
-
+    var initials = createInput.value;
     // Event listener to capture initials and local storage for initials and score
+    
     createSubmit.addEventListener("click", function () {
-        var initials = createInput.value;
-
+       // var initials = createInput.value;
         if (initials === null) {
-
             console.log("No value entered!");
 
         } else {
@@ -184,6 +182,7 @@ function allDone() {
             } else {
                 getScore = JSON.parse(getScore);
             }
+            console.log(finalScore);
             getScore.push(finalScore);
             var newScore = JSON.stringify(getScore);
             localStorage.setItem("getScore", newScore);
