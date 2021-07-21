@@ -23,7 +23,7 @@ if(getScore !== null) {
     for (var i = 0; i < getScore.length; i++) {
 
         var highScoreList = document.createElement("list");
-        highScoreList.textContent =  getScore[i].initials + "   " + getScore[i].score   ;
+        highScoreList.textContent =  getScore[i].initials +   "   "   + getScore[i].score;
         highScore.appendChild(highScoreList);
     }
 }
